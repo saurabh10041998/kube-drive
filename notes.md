@@ -14,3 +14,12 @@ I will start this as service (Most likely as systemd service) on host which has 
 ./kube-drive <option> [-f config-file]
 ```
 
+### Backend API design
+These are possible API routes I have thought of
+
+| API Route | Type | Description |
+|-----------|------|-------------|
+| `/pods/list?ns=<namespace>` | GET | list the pods which are present in namespace |
+| `/namespace/list` | GET | list the namespace |
+| `/pods/<pod-name>/lsr` | GET | List the root file / folders (depth 1) for pod `<pod-name>` |
+| `/pods/<pod-name>/ls` <br> <pre> ``` { "parent": ... }``` </pre> | POST | List the folder in path suggested by `parent`  |
