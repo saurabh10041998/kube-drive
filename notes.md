@@ -21,5 +21,22 @@ These are possible API routes I have thought of
 |-----------|------|-------------|
 | `/api/v1/namespaces/{ns}/pods` | GET | list the pods which are present in namespace |
 | `/api/v1/namespaces` | GET | list the namespace |
-| `/api/v1/namespaces/{ns}/pods/{pod}` | GET | pod  |
+| `/api/v1/namespaces/{ns}/pods/{pod}` | GET | pod details {container, status} |
 | `/api/v1/namespaces/{ns}/pods/{pod}/containers/{container}/fs?path=/var/log&depth=1` | POST | List the folder in path suggested by `path` upto `depth` 1 |
+
+
+## Text editor 
+sublime text
+
+## Tech stack
+- Backend: Rust
+- Frontend: Angular
+
+## Backend libraries
+- Web api design - Axum
+- Frontend - Angular
+- Monitoring - Prometheus 
+
+### I want to use these technology but first want to evaluate whether these fit in any of this project idea
+- Graphql
+- Elasticsearch
