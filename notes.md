@@ -1,6 +1,6 @@
 ## Decisions on the fly
 
-Run the service on the jumphost which which starts the API server 
+Run the service on the jumphost which starts the API server 
 On the jumphost 
 And user interacts it via web API.  
 
@@ -19,7 +19,7 @@ These are possible API routes I have thought of
 
 | API Route | Type | Description |
 |-----------|------|-------------|
-| `/pods/list?ns=<namespace>` | GET | list the pods which are present in namespace |
-| `/namespace/list` | GET | list the namespace |
-| `/pods/<pod-name>/lsr` | GET | List the root file / folders (depth 1) for pod `<pod-name>` |
-| `/pods/<pod-name>/ls` <br> <pre> ``` { "parent": ... }``` </pre> | POST | List the folder in path suggested by `parent`  |
+| `/api/v1/namespaces/{ns}/pods` | GET | list the pods which are present in namespace |
+| `/api/v1/namespaces` | GET | list the namespace |
+| `/api/v1/namespaces/{ns}/pods/{pod}` | GET | pod  |
+| `/api/v1/namespaces/{ns}/pods/{pod}/containers/{container}/fs?path=/var/log&depth=1` | POST | List the folder in path suggested by `path` upto `depth` 1 |
