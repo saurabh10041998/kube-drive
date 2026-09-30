@@ -34,9 +34,10 @@ sublime text
 
 ## Backend libraries
 - Web api design - Axum
+- Error handling  - Anyhow
 - Frontend - Angular
 - Monitoring - Prometheus 
 
 ### I want to use these technology but first want to evaluate whether these fit in any of this project idea
-- Graphql
-- Elasticsearch
+- Elasticsearch (AI suggested interesting and expensive idea to index files metadata accross pods/containers
+and search "Find file X accross cluster")
